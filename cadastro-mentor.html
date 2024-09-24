@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja um mentor</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f1f1f1;
+        }
+
+        header {
+            background-color: #007bff;
+            padding: 10px;
+            color: white;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            width: 50px;
+        }
+
+        #container {
+            display: flex;
+            padding: 20px;
+            width: 100%;
+        }
+
+        #left-column {
+            width: 200px;
+            margin-right: 20px;
+        }
+
+        #left-column a {
+            display: block;
+            background-color: orange;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        #left-column a:hover {
+            background-color: darkorange;
+        }
+
+        #main-column {
+            flex-grow: 1;
+            margin-right: 20px;
+        }
+
+        #cadastro-mentor-container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        input[type="submit"] {
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: darkorange;
+        }
+
+        #right-column {
+            width: 300px;
+        }
+
+        #right-column h2 {
+            margin-top: 0;
+        }
+
+        #testimonials {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <!-- Coluna Esquerda -->
+        <aside id="left-column">
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar para a Página Inicial</a>
+            <section id="ai-section">
+                <h3>Seja um Mentor!</h3>
+                <p>Ajude pessoas com sua experiência e compartilhe seus conhecimentos.</p>
+            </section>
+        </aside>
+
+        <!-- Coluna Principal -->
+        <main id="main-column">
+            <h1>Cadastro de Mentor</h1>
+            <section id="cadastro-mentor-container">
+                <h2>Preencha suas habilidades e experiência</h2>
+                <form id="mentor-form">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+                    <label for="profissao">Profissão:</label>
+                    <input type="text" id="profissao" name="profissao" placeholder="Sua profissão" required>
+
+                    <label for="habilidades">Habilidades:</label>
+                    <textarea id="habilidades" name="habilidades" placeholder="Descreva suas habilidades e áreas de expertise" rows="5" required></textarea>
+
+                    <label for="experiencia">Experiência:</label>
+                    <textarea id="experiencia" name="experiencia" placeholder="Descreva sua experiência profissional" rows="5" required></textarea>
+
+                    <input type="submit" value="Cadastrar">
+                </form>
+            </section>
+        </main>
+
+        <!-- Coluna Direita -->
+        <aside id="right-column">
+            <section id="testimonials">
+                <h2>Mentores Cadastrados</h2>
+                <!-- Adicione conteúdo de mentores cadastrados aqui -->
+            </section>
+        </aside>
+    </div>
+
+    <script>
+        // Função para exibir mensagem ao cadastrar mentor
+        const mentorForm = document.getElementById('mentor-form');
+        mentorForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o envio do formulário para fins de teste
+            alert('Mentor cadastrado com sucesso!');
+        });
+    </script>
+
+</body>
+</html>

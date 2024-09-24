@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Ideia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos mantidos como no código original */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f1f1f1;
+        }
+        header {
+            background-color: #007bff;
+            padding: 10px;
+            color: white;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header img {
+            width: 50px;
+        }
+        #container {
+            display: flex;
+            padding: 20px;
+            width: 100%;
+        }
+        #left-column {
+            width: 200px;
+            margin-right: 20px;
+        }
+        #left-column a {
+            display: block;
+            background-color: orange;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        #left-column a:hover {
+            background-color: darkorange;
+        }
+        #ai-section {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            position: relative; /* Para posicionar a imagem */
+        }
+        #ai-section img {
+            position: absolute;
+            right: -30px; /* Ajuste conforme necessário */
+            top: 10px; /* Ajuste conforme necessário */
+            width: 60px; /* Ajuste o tamanho da imagem */
+        }
+        #main-column {
+            flex-grow: 1;
+            margin-right: 20px;
+        }
+        #idea-container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .idea-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .idea-header h2 {
+            margin: 0;
+        }
+        .idea-engagement {
+            display: flex;
+            gap: 10px;
+        }
+        .idea-engagement button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .idea-engagement button:hover {
+            color: orange;
+        }
+        .engagement-stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        .comments-section {
+            margin-top: 30px;
+        }
+        .comment {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            justify-content: space-between;
+        }
+        .comment img {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .comment p {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 8px;
+            flex-grow: 1;
+        }
+        .like-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .like-btn:hover {
+            color: orange;
+        }
+        #new-comment {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        #submit-comment-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        #submit-comment-btn:hover {
+            background-color: darkorange;
+        }
+        #right-column {
+            width: 300px;
+        }
+        #right-column h2 {
+            margin-top: 0;
+        }
+        #testimonials, #communities {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        button.submit-idea-btn {
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button.submit-idea-btn:hover {
+            background-color: darkorange;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- Coluna Esquerda -->
+        <aside id="left-column">
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar para a Página Inicial</a>
+            <section id="ai-section">
+                <h3>Use a IA para analisar sua ideia</h3>
+                <p>Obtenha insights automáticos baseado nos comentarios</p><p></p>
+              </section>
+                  <img src="https://img.odcdn.com.br/wp-content/uploads/2023/12/robo_humanoide-1.jpg" style="width: 200px; height: 200px;" alt="Robô">
+          
+        </aside>
+
+        <!-- Coluna Principal -->
+        <main id="main-column">
+            <section id="idea-container">
+                <div class="idea-header">
+                    <h2>Criar uma feira de ciências colaborativa</h2>
+                    <div class="idea-engagement">
+                        <button id="idea-like-btn" class="like-btn"><i class="fas fa-heart"></i> Curtir</button>
+                        <button id="comment-btn"><i class="fas fa-comment"></i> Comentar</button>
+                        <button id="submit-comment-btn" style="background-color: #007bff;">Acompanhar essa ideia</button>
+                    </div>
+                </div>
+                <p>Esta ideia visa criar uma feira de ciências onde alunos de diferentes disciplinas possam colaborar em projetos inovadores. O objetivo é estimular a criatividade e a cooperação entre diferentes áreas do conhecimento.</p>
+                <div class="engagement-stats">
+                    <span><i class="fas fa-heart"></i> 120 Likes</span>
+                    <span><i class="fas fa-users"></i> 45 Seguidores</span>
+                    <span><i class="fas fa-envelope"></i> 10 Mensagens</span>
+                </div>
+            </section>
+
+            <section class="comments-section">
+                <h3>Comentários</h3>
+                <div id="comment-list">
+                    <div class="comment">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Comentador 1" width="50">
+                        <p>Ótima ideia! Isso pode realmente promover a interdisciplinaridade entre as áreas!</p>
+                        <button class="like-btn"><i class="fas fa-heart"></i> Curtir</button>
+                    </div>
+                    <div class="comment">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Comentador 2" width="50">
+                        <p>Seria interessante incluir também mentores para orientar os grupos!</p>
+                        <button class="like-btn"><i class="fas fa-heart"></i> Curtir</button>
+                    </div>
+                </div>
+                <textarea id="new-comment" placeholder="Escreva seu comentário aqui..."></textarea>
+                <button id="submit-comment-btn">Enviar Comentário</button>
+            </section>
+        </main>
+
+        <!-- Coluna Direita -->
+        <aside id="right-column">
+            <section id="testimonials">
+                <h2>Ideias que Você Segue</h2>
+                <div class="testimonial">
+                    <img src="https://picsum.photos/50?random=40" alt="Amigo 1">
+                    <div class="testimonial-content">
+                        <p><strong>Maria:</strong> "Criação de um podcast no canal de you tube do senac com alunod de Radioi e TV"</p>
+                        <div class="engagement-stats">
+                            <span><i class="fas fa-heart"></i> 36 Likes</span>
+                            <span><i class="fas fa-comment"></i> 13 Comentários</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="https://picsum.photos/50?random=35" alt="Amigo 2">
+                    <div class="testimonial-content">
+                        <p><strong>José:</strong> "Projeção em mapping para promover a organização nas maiores feiras do pais nas olimpiadas"</p>
+                        <div class="engagement-stats">
+                            <span><i class="fas fa-heart"></i> 21 Likes</span>
+                            <span><i class="fas fa-comment"></i> 9 Comentários</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="communities">
+                <h2>Comunidades Relacionadas</h2>
+                <div class="community">
+                    <p>Educação e Inovação</p>
+                    <div class="engagement-stats">
+                        <span><i class="fas fa-heart"></i> 45 Membros</span>
+                        <span><i class="fas fa-comment"></i> 10 Posts</span>
+                    </div>
+                </div>
+                <div class="community">
+                    <p>Ciência & Tecnologia</p>
+                    <div class="engagement-stats">
+                        <span><i class="fas fa-heart"></i> 32 Membros</span>
+                        <span><i class="fas fa-comment"></i> 8 Posts</span>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </div>
+    <script>
+        const commentList = document.getElementById("comment-list");
+        const newCommentInput = document.getElementById("new-comment");
+        const submitCommentBtn = document.getElementById("submit-comment-btn");
+
+        // Adicionar novo comentário manualmente
+        submitCommentBtn.addEventListener("click", () => {
+            const newComment = newCommentInput.value;
+            if (newComment.trim() !== "") {
+                addComment("Você", newComment);
+                newCommentInput.value = "";
+            }
+        });
+
+        // Função para adicionar comentário
+        function addComment(author, text) {
+            const comment = document.createElement("div");
+            comment.classList.add("comment");
+            comment.innerHTML = `
+                <img src="https://cdn-icons-png.flaticon.com/512/2021/2021646.png" alt="${author}" width="50">
+                <p><strong>${author}:</strong> ${text}</p>
+                <button class="like-btn"><i class="fas fa-heart"></i> Curtir</button>
+            `;
+            commentList.appendChild(comment);
+        }
+
+        // Função para gerar comentário da IA automaticamente
+        function generateAIComment() {
+            const aiComments = [
+                "Essa ideia tem um grande potencial!",
+                "Interessante! Talvez adicionar uma perspectiva sustentável?",
+                "Gosto da ideia, mas acho que pode ser melhor elaborada.",
+                "Acho que seria bom envolver mais grupos nesse projeto.",
+                "A interdisciplinaridade é chave para o sucesso desse projeto!"
+            ];
+            const randomIndex = Math.floor(Math.random() * aiComments.length);
+            addComment("Inteligência Senac", aiComments[randomIndex]);
+        }
+
+        // Gerar comentário da IA a cada 5 segundos
+        setInterval(generateAIComment, 5000);
+    </script>
+</body>
+</html>

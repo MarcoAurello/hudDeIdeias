@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub de ideias</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilo para os links das ideias */
+        .ideas-list a {
+            color: inherit;
+            /* Mantém a cor original */
+            text-decoration: none;
+            /* Remove o sublinhado */
+            transition: color 0.3s ease;
+            /* Suave transição de cor */
+            display: block;
+            /* Faz o link ocupar toda a área do componente */
+        }
+
+        .ideas-list a:hover {
+            color: orange;
+            /* Muda a cor para laranja ao passar o mouse */
+        }
+
+
+        .idea {
+            margin-bottom: 10px;
+            /* Adiciona espaço entre as ideias */
+            padding: 10px;
+            /* Adiciona preenchimento ao componente */
+            border: 1px solid #ccc;
+            /* Adiciona uma borda ao redor da ideia */
+            border-radius: 5px;
+            /* Bordas arredondadas */
+            background: #f9f9f9;
+            /* Fundo leve */
+        }
+        .floating-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: green; /* Cor do ícone */
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.floating-icon:hover {
+    transform: scale(1.1); /* Efeito ao passar o mouse */
+}
+
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+    border-radius: 8px;
+}
+
+.close-button {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <table>
+            <tr>
+                <td>
+                    <img src="senac.png" alt="Foto de Perfil" id="profile-pic">
+                </td>
+                <td>
+                    <h1>conecte-se</h1>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <div id="container">
+        <!-- Coluna Esquerda -->
+        <aside id="left-column">
+            <div id="profile">
+                <img src="https://cdn.awsli.com.br/2500x2500/1610/1610163/produto/177684970/poster-o-espetacular-homem-aranha-2-f-3835af38.jpg"
+                    alt="Foto de Perfil" id="profile-pic">
+                <p class="username">Marco Aurellio</p>
+            </div>
+            <div id="communities">
+                <h2><i class="fas fa-trophy"></i> Área de mentorias</h2>
+                <a href='mentores.html'>
+                    <button class="see-all-btn">Preciso de um mentor</button>
+                </a>
+                <a href="cadastro-mentor.html">
+                    <button class="see-all-btn">Quero ser mentor</button>
+                </a>
+                <a href="dicas-inovacao.html">
+                    <button class="see-all-btn">Como ter ideias inovadoras?</button>
+                </a>
+            </div>
+            <br>
+            <div id="friends"
+                style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 600px; margin: auto;">
+                <h2><i class="fas fa-lightbulb"></i> Minhas Ideias</h2>
+                <ul class="ideas-list">
+                    <li>
+                        <a href="ideia.html">
+                            <img src="https://picsum.photos/50?random=25" alt="Ideia 1"> Criar uma feira de ciências
+                            colaborativa
+                        </a>
+                        <div class="engagement-icons">
+                            <i class="fas fa-heart" style="color:red;"></i> 150
+                            <i class="fas fa-comment" style="color:blue;"></i> 45
+                            <i class="fas fa-users" style="color:green;"></i> 200
+                        </div>
+                        <hr>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="ideia.html">
+                            <img src="https://picsum.photos/50?random=48" alt="Ideia 2"> Implementar um aplicativo para
+                            gerenciar a fila do Restaurante Senac
+                        </a>
+                        <div class="engagement-icons">
+                            <i class="fas fa-heart" style="color:red;"></i> 150
+                            <i class="fas fa-comment" style="color:blue;"></i> 45
+                            <i class="fas fa-users" style="color:green;"></i> 200
+                        </div>
+                        <hr>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="ideia.html">
+                            <img src="https://picsum.photos/50?random=20" alt="Ideia 3"> Organizar palestras mensais
+                            sobre inovação
+                        </a>
+                        <div class="engagement-icons">
+                            <i class="fas fa-heart" style="color:red;"></i> 150
+                            <i class="fas fa-comment" style="color:blue;"></i> 45
+                            <i class="fas fa-users" style="color:green;"></i> 200
+                        </div>
+                        <hr>
+                    </li>
+                </ul>
+                <a href="timeline.html">
+                    <button class="submit-idea-btn" style="margin-bottom: 10px;">Ver Todas</button>
+                    <p></p>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Coluna Central -->
+        <main id="main-column">
+            <!-- Input para cadastrar nova ideia -->
+            <section id="updates">
+
+
+                <!--                 
+                <textarea id="new-idea-input" placeholder="Digite aqui sua nova ideia"></textarea> -->
+                <a href="novaIdeia.html"> <button id="submit-idea-btn" style="font-size: 22px;">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA7VBMVEXxxBD////1nBXwwQD1lwD1mQD1mhXxxhDwwADyvRH1mw70lQD60qL4vnL4u3P//vz2pzb4uGPytBL5yJT2q0T85cj0zEj+8uP1nQD96c7//ff67MX0pBT716v77b/89Nb22n700FL99+D97dn44ZXyySz+9+z45Kf002b0017+8uL5x4n3r0/11nH+++v88s/55Kj5xID34JX667fzqhP73Lf5yo33qz372rL2oyb4uGf22nvyyCXzyzr0z0z30H71ukr647b53Z31ylj0xEDyrwD1szP4wG362qX4yoL3xHL2qS/20HH50JP3tlV4rOwrAAASC0lEQVR4nN2dfX/aOBKAA7YDsUlJ2qQQQ4GEQMgbadKm2bSQ3d5tb7ttN9//45wtjWxJlo0ljQN388f+tgSMH2Y0r7K9Vft/l611n0Dl8lKE4fxkeHPTo3JzMzyZhy/0zVUTtoeDs9H5crHlyLK1WJ6PzgbDdsVnUB1hOB/czRbNJsVRCflLs7mYnX6oUKPVEM6Hp7NJLpmKdDI7Hc4rOZcKCIdnx1tl4QTMxfHZEP90kAnbgy8NfTqOsvFlgLwwMQnD3nWjaUqXUDad6x7mqsQjHI4m1ngMcjG6QTsvJMLwbGlsm0pIZ3mGpEgUwpMv5msvn9G5PsE4OQTC3jk6HoM8720A4eBtRXyUcTlYM2EPd/lVwWhFePOE5D0LGZtvrWzVgvCkqvWXYXTOLXIdY8Jw9EJ8lHFkHDtMCc9ekI8ynr0o4clx80X5Ymk+mYVHI8K7F1YgFcc5fSHCk8k6+AjjxECN+oRnLxAhchGbd5UTzs/Xx0cYj3U7AZqEg8Z6ASPEhmaOo0d4um6+WDQdjg5heLwJgLGl6oR/DcLh2nyoLM5EI4srTzhYSxBUi+OUX4ylCc9ePospkmbpJK4s4elmAUaII1zC682xUCbONSbhmsO8WpxzNML2hkQJWZynMu3xEoSbEgazUiowliDcWMAYcbUWVxM+bS5gbKj2hBvpZFJZ7W5WEW5gmBBlZdBYQbgRxUSxrCo1igk3LFVTy4oErpCw978AGCEWpuFFhMPNN1EqTlExVUAYbkw9uEqcSUHkLyDc4Egvi3NsQqjpRpHrY83DFTjUXMKB5lecjxZ4jM7kVDMQ5xf9eYTzht45xWv9dyxEJ65uL3a0TqGR10fNI9RbhGAkv+NEF4eW7y0txNz0LYfwTNNGYEqLggiAtbGrh5gT+NWEJ5r25rBxAoKhOl/gWC23roeoHtuoCfUjITu6tRaZBmsXdX9bC9GZlCfUz7edBhJiosFO3a/XNRGVgykVoa6NkqOXQUz3B+e+g2mQAGojquxURWhU1Tupoao+HnMtnmaj07u70eztIgeTN9F6XRtRWfErCA1LphTxD/nkI7jz9zdT7jumw/fxJuK8M0wANRFVhVSWMDTe/8oM9d3Hhvi6esNoePNLYnTe0790UkBdLWa/KEs4Mnb4TuOCEgYpouM0CrZRhl+3+G8DQgFQDzEx8wJCEzeTIhIt7vnbDNGZfMjFo/KVi0zOMn7lQgTURMw4mwyhVW/N2fo6HT970UkRRMe5K9GV/le69cE5H0/vZUAtxGzyJhPeWCYlzX7gkZOKEKVdBe3xYevT7e3tp9bhWADv/DtF3PGCDGB0tO3yiPL+aZnQvv/b36Yn9VFIFMetq7rnuq7nkf/Wr1oXghrZpxs721lAHS1mIoZEiNB7alBEr542T8LWz8D1ed34vhvstdL4Md5hv2xjp65iLI/YlPZqSoRLhBKPIHoPyelPL31XYXn16NXL9E1/YiFSd5VHqFnY5yO6B0mIaKn5gLGV6JlDtDNUqdwXCd/iVOmN/kFifnu5fJRxb8zeyiPaaNF5m0/YQ2pDOEumwZbKM4qMAVNjiGWoTi+XEGnO5LCeSXs3WMEXi7sLsWP6mgHYIYoxkSe0SWeEbwAv2r5ySwBGiFeAOP6WItqsRSGx4Qm/IKkQ4mD7oRxghLgHiK1vKFpMymiJ0LiokA5/rqdBQYv7SIihklCzv5YrsAh3ywPGaxGWos+vRZWUQuTTKY4QI9qnB2/pAEaI4FHfBRyicdDgo35KiDNLY8c+KuNFeQmO6AcfXAyPys3bUkLzypcXNq18XBUHZfEf6QcPg20ERK4STgjDBQYg61l+0rPRWNxPoESfRzQNGulEMSHEyWdAhR1PV4WREr0OKLG+bb8W0wojIUTZVsJUqOVHmTB/uufX7Q013YTCCNua07Sc496BCg0Ao4qrk3hhe8RGWyIcoAzGIF26NFFhpMTL9PexXouJmTJClIwNxultMxVGSqS/+5WMaKLFJHNjhDhGSqP9vZkKIyXeJ2Zqj9gQCZHCPY2z+8Y63CefH9PPb9slcCzoAyFOTrogxwpNASNEGsUgXbALGix9BELdvTPCrXSSF2lVcWhqpJGZHgpGECHCdzR2fF/VRy1AZHtsKOFUM6Fxlm9TSUYP8KsZ5DMJ4RtuIUYSvE6+5c+rB0XHpwhxMeUIdZeh0FcO2cAQmlzGyzBZiMwK3EuhN36Y7fcXIcJCpIR6Y+3M7pw/6OtNEg3be/oZGxOfFvsXtDDxr6TvUTnpfETYAkMJZ1qEmc05n/rkS5rk9KaKX7o0YZ1aFiV0W9L3dFRHzkV0ZilhONEBzE6wdl06aiL/uDA30shM6TSDHsK7lb5HfejcsQ2tLwjhXHN/kDSG7Ph0YEhj7Njc0URqo/1hGi6YRtNfUv3j5WnRmSeEH3Rjxez+MJUW2RfysQGFRTZY+PmSIaThApayX29x33O/n/fb5SBSf0EI77RvzPU6cFOh+0I+bi2VhL67d5AnmZY/ED747LOcBPnmr0aklc6WvqOJRZHwb39UEvr1cTtfxpJbkghLixKRuhpCaNDAUCH+h5zdkUjoHtWKRP1u/YCjRFwwwrZJbZhFhF7SWOyydYsn+e2u8O6Aepq+fsBRIZLwFRMOjarfLKJHzk5y6V7x5WVSmi5EC2tEkoLEhIZz0QxiQM5Oivjuu0LCd4KVQnxo6zZbcxCJM40JTUsnGTEgCpCyNr9LUaaHR4LQnkytK75ZyNqsEckOpJjQuBcsIUq1D3v1N2q8AR9gAlhwv4mORsq8bRFJahITmg9GRUQwSKl68h+otj7z4IAihwXoCr8zTYskRFKwxoQWIxkB0dtVagBUK/hYUGHOW3OyM21EMkSJCW36+Tyiv0dXnHTaHhRBnPWyl64kFJcmohb1l4i4oIShBaCEqD5BCONccAddHckJHvxE5oAyYpsQalYWBYhw4m9kJe5LGvMPMlqln39j5WiyiHF1sWW/QSFFhIIuMzuUVx30RceZ91Fl39pUmAJiXMluIfRKE0T/gKZo8vDQ+yx4TjBG0bvWk7SvrZ135yLGrZot+w2XHCIUsJlum5vOXOpJd6KTeReNFVYltIgYb8VEIUwQYSFdZM79ljdTWK63mXddKJexBSIQYsxGAZHZn+xC4HVYeDklkvdcU9q4BWK8/wuJkCGCr8jU+Y+kwoB8kzqeUCZhIcQsKVUiYhICopfOcUVCEilDICT/mEqEef7HBhGVEBAhK5Ey6nqXuhogJArtiLUvy9CnKCoERFxCish2VEhKFCpbWkdKlTLbbWI4P1YjIhMSRL9Oa/pDURUu353oqoJCQFehTcdcgYhMSBAhYNSeBRXx7hO0JSalLBe3GFwpEL0eVjzkEP3uFIyQV0ZA87QrQkgLRmHM4oMZTw024hRI7J5xCWNEiO7i1j0ojomfhLgnlLlsCPMKU4UJIertLxo70K6p1Q44OwXbJTk1RBQ+dfGg2LBP2CTCI5TaQkZkp9vhnA1slSFU3mXGaQbQl7LNuWXxjjDqwywi233P2SnUVeQVXp/An/0AEiGtntpYbA5D9JmdJirxXqVrD3heJYSsIB4nbgZJlb4f2vdpOD6H3WO/8Rpcf5qeQoVI/CckL2l2Bglp0gNwvYMuijZJXLLstXGA1+3kOu7GazC7pMaAkTxBdrnIwdHXWrBuiTPOlFZWhBgXksBc+JlpEYIiO0//gVT/pHyi0T+t5KEsZI4JbBYjeyOR16rnnQGsXfahuJ6JSoTyiaTVNJokxRNTIXsrm94jIHp/1ezmFhwg2wi46zJEupmFNZv8LiEM47OmxVPIJhbQpkqSOEaMgEjyDIvZEwfIti6M/fp2f4tU18f0FZaeuoBVZ/M21jfOtBpJEMNBJD7NfH6o0GAntrwIkVPiPSgRFBe9AdTJ6kDIWLk83PfHSIhBr2YxA1ZokN3LghgqrES23KgtxpM3WJJgv/AvobODhkhKbdM5vgIwvZcF0aJD3SmkLhDzohABTVWIleBXxMoeC5EUooZ7MTjAaxkQEGFXO5CAMUZhHkIjmK96EJAi2vS//eeEUHs/DSfNaQYQDBX209LXoXyKUjXwlbR4Yi0Bue+WIIYWSqQdFaM9UYIOhTXII8L2N+okIRmNVAIpKs2yoVbMTDCio0Fu25X/okH4PSG0qS6aw4wGKSLbUEtRoKCI1hWsPGqXAK4oKkCLhiN9SthJCDX3Joo6XEZmKm9tIojCpmgoCiMU6MZdUtXS2PesWG1+Pfrb9MC8zPD76d5EO1ez9de+qruy3Z8Qp0nbwFDYR6sP1EYn2bR1GiqHvr63/7lu4WgglzDZI5xh7KuvaunThUhOEhZc5EGheKJqU24ySs/Rqi/l/s0RWrZqGmpEGGIccA22KHXhN+dBHSFPu3EEVgAlnNsWwUpEiBDEHtmmN1fYJMuX/tji1+ccoe29ShtKROZTyPl3mT1COUiiADSoUNvACSH0RpCumVEisrhANkPRYUXHc6HZSF/MNKXwxP1HIETomWYRwQY7dBMz+f8w+h8YbBChXcRXlRAeCYT2164ptAiEq6USQtgxiHj9YRZxrYSkg8ETYlxDKgeNtRK6XyVCnOuARcS1Enbl64BRruWWDHWdhEk/i7seH+NSZxGRxfPHvTx5/K0qQmg784Q491QQ1mJSCeZeMpPWxcji96cZQqT7YvBrUah11b90VYRs14tAiDQo5QyVEXpdXviLeyojZMMegRDp/jQcotrTTLlytypCtnVFIsS6x1BiqDm+lLtcoSpClpNKhEj3iUq1mBct0kS7MkL1faKw7vWVIOYR7lZNmGRsMiHilgV6d0g1IbftqSJCd8x9XRX33CMSIQJh2BHkkGs7VUPINqoqCPH2fxFDZdGCvxwoqnrju7SCBJUQpvlMhhDr3peA6FLC+/18OayAkF2GpCTEuX8pY+yvJ/OGdqWaECvqU3F+rIPQ/ykeHP8+whxhyedo4hIGogoruBf0mgllFaLfz3vthFzOrSbEjInrIBRjoZIQMbFZB2H28n/MZyNkCJ++t8rIO4shoQy4m+FBfL6FQna6Yj6TI3j7ZhVX/+M9o0QlTrPL5Wi5gkYYfM/iqJ4zg/bQvOWvX792S4jFdb+CSPlaPiHaXa/LehqLe2cJ4qnuMqIitNpfwxMuyzxVWnEVm6HAWLsMocEzu9SIRU/PTAVpyO33lT+omhDJTks+/Vy+Kt9QgrHy6GpCLDttvi8B+A7nejx21VxJQrSHCKx6VFD2UkVD8Q5yjp9HqPsMy1zEX51CvovPSIuwe5HzDXmEaOW+823v9k2evPpZcAMvLZEK+zKEaI/kbrzOT9fQsplAGShWEKKlNo3Xyh1TmJK7CIsJ0Z7pXDkiXCquTYh3YWLViMpsrQwhXl+qWsTgvgiikBCvkKoSMfinkKGYEM2hVojorujKriDEeaBAlYju/gqCVYR4vbdqEF35XsP6hHgVfxWIrqqq1yXcZETuAXY2hOHGIpYBLEO4sVp0H0oAliPcTHez2sloEG5i0FgZJvQIa6eblt0EZcevZQk3LYFbkaqZENZ6BQ99f2lE3ytMtg0JaycbUy96j8W30DYlrIVYLtUS0T0oKHitCDF7N+aIvrp5j0RYGzSQNqEaI3rdr3qnrElYmyNZqilicCA/PgSbMN5oi3MXQhNEv3yQsCDE8qkGiO6jeviCTRjPbVBul6mJ6Ht/l5tHIhDWTo5Rrj/RQnQfyk0jcQhrtfcYatRAdLuKTQiVEtbCEQJjWUTP+1GmFMQljEx1Zs9YCtF3nzWyNETCWu3mqWl9p+yViH7w0Ft9KhURRoxLWz2uQPTdn1/tTtGSMMrjniwZixA998GSD4EwKhzP7RhzEV33Wd4suh7CyOd8cWwglYi+6/2Qn+9mJCiEUew4s1mQGUTfdX9+N44PoiARRjIcTYwhRUTP7f+wCA+S4BFGiuxdNwzDR4Lou0H3rx6S+ohgEkbS7o0aRmsyRvQj4+z/6Jmk1wWCTBjL8Ox4oU/Z+OY9/vHdLLkulAoII5kOT2cTpyxm/MbJ7PRIt3ovJ9UQxhJOB3ezRbPp5JKSvzSbi9nphznmyhOlOkIq7ZPB+9H5ciE8I5lCL5bno/eDE+Rll5GqCZm05yfDm5selZub4cm8ajImL0W4Pvn/J/wv8iDJ5CRsmngAAAAASUVORK5CYII="
+                            alt="Amigo 1" style="border-radius: 50%; width: 35px; height: 35px; margin-right: 15px;">
+                        Conte aqui sua idéia
+                        <img src="data:image/png;base64,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"
+                            alt="Amigo 1" style="border-radius: 50%; width: 35px; height: 35px; margin-right: 15px;">
+
+
+
+                    </button></a>
+
+                <p></p>
+            </section>
+            <p></p>
+
+            <!-- Ideias novas -->
+            <p></p>
+            <section id="new-ideas" class="ideas-section">
+                <h2 style="color: orange; margin-top: 10px;">
+                    <i class="fas fa-chart-line"></i> Ideias cadastradas Recentemente
+                </h2>
+                <div id="ideas-container"></div>
+                <a href="timeline.html">
+                    <button class="submit-idea-btn" style="margin-bottom: 10px;">Ver Todas</button>
+                </a>
+            </section>
+            <hr>
+
+
+
+
+
+            <!-- Ideias com Maior Engajamento -->
+            <section id="popular-ideas" class="ideas-section" style="margin-top: 20px;">
+                <h2 style="color: orange;"><i class="fas fa-chart-line"></i> Ideias com Maior Engajamento</h2>
+                <div class="idea"
+                    style="display: flex; align-items: center; padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; background-color: #f9f9f9; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s;">
+                    <a href="ideia.html"
+                        style="color: black; text-decoration: none; display: flex; align-items: center;">
+                        <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Amigo 1"
+                            style="border-radius: 50%; width: 50px; height: 50px; margin-right: 15px;">
+                        Crie um jornal/blog onde os alunos possam escrever sobre eventos da escola, entrevistas e
+                        tópicos de interesse.
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart" style="color:red;"></i> 150 Curtidas</span>
+                            <span><i class="fas fa-comment" style="color:blue;"></i> 35 Comentários</span>
+                            <span><i class="fas fa-users" style="color:green;"></i> 32 Engajados</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="idea"
+                    style="display: flex; align-items: center; padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; background-color: #f9f9f9; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s;">
+                    <a href="ideia.html"
+                        style="color: black; text-decoration: none; display: flex; align-items: center;">
+                        <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Amigo 2"
+                            style="border-radius: 50%; width: 50px; height: 50px; margin-right: 15px;">
+                        Estudantes mais experientes podem oferecer tutoria e suporte para seus colegas, compartilhando
+                        conhecimento em diferentes disciplinas.
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart" style="color:red;"></i> 510 Curtidas</span>
+                            <span><i class="fas fa-comment" style="color:blue;"></i> 25 Comentários</span>
+                            <span><i class="fas fa-users" style="color:green;"></i> 43 Engajados</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="idea"
+                    style="display: flex; align-items: center; padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; background-color: #f9f9f9; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s;">
+                    <a href="ideia.html"
+                        style="color: black; text-decoration: none; display: flex; align-items: center;">
+                        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Amigo 3"
+                            style="border-radius: 50%; width: 50px; height: 50px; margin-right: 15px;">
+                        Uma comunidade onde os alunos podem discutir livros, fazer resenhas e sugerir leituras,
+                        promovendo a literatura entre os estudantes.
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart" style="color:red;"></i> 410 Curtidas</span>
+                            <span><i class="fas fa-comment" style="color:blue;"></i> 35 Comentários</span>
+                            <span><i class="fas fa-users" style="color:green;"></i> 23 Engajados</span>
+                        </div>
+                    </a>
+                </div>
+                <a href="timeline.html">
+                    <button class="submit-idea-btn" style="margin-bottom: 10px;">Ver Todas</button>
+                    <p></p>
+                </a>
+            </section>
+        </main>
+
+        <!-- Coluna Direita -->
+        <aside id="right-column">
+            <section id="testimonials"
+                style="background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); ">
+                <h2>Ideias que Você Segue</h2>
+                <div class="testimonial">
+                    <img src="https://picsum.photos/50?random=40" alt="Amigo 1">
+                    <div class="testimonial-content">
+                        <p><strong>1:</strong> "criação de hackathon interno multidissiplinar com alunos diversos"</p>
+                        <div class="engagement-icons">
+                            <span><i class="fas fa-heart" style="color:red;"></i> 210 Curtidas</span>
+                            <span><i class="fas fa-comment" style="color:blue;"></i> 35 Comentários</span>
+                            <span><i class="fas fa-users" style="color:green;"></i> 32 Engajados</span>
+                        </div>
+                    </div>
+                    <a href="timeline.html">
+                        <button class="submit-idea-btn" style="margin-bottom: 10px;">Ver Todas</button>
+                        <p></p>
+                    </a>
+                </div>
+
+
+
+
+                <aside id="right-column">
+                    <section id="testimonials"
+                        style="background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); ">
+
+
+
+
+                        <section id="communities" style="margin-top: 20px;">
+                            <h2><i class="fas fa-trophy"></i> Premiações</h2>
+                            <ul>
+
+
+                                <li style="align-items: center;">
+                                    
+                                    
+                                    <a href="premio.html"><img
+                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrwHoHL9SqdPeH-F1V04vtyhM7hijxwW7p1A&s"
+                                            alt="Premiação 1"> </a>
+                                        
+                                </li>
+
+
+                        </section>
+                    </section>
+                </aside>
+                <div id="chat-icon" class="floating-icon">
+                    <span id="online-count">5</span> 💬
+                </div>
+                <div id="chat-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" id="close-modal">&times;</span>
+                        <h2>Bate-papo</h2>
+                        <div id="chat-messages" class="chat-messages">
+                            <!-- Mensagens do bate-papo -->
+                        </div>
+                        <div class="input-container">
+                            <input type="text" id="chat-input" placeholder="Digite sua mensagem..." />
+                            <button id="send-button">Enviar</button>
+                        </div>
+                    </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Hub de Ideias. GTI SENAC- Marco Aurellio Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script>
+const chatIcon = document.getElementById('chat-icon');
+const chatModal = document.getElementById('chat-modal');
+const closeModal = document.getElementById('close-modal');
+const sendButton = document.getElementById('send-button');
+const chatInput = document.getElementById('chat-input');
+const chatMessages = document.getElementById('chat-messages');
+
+// Abre o modal ao clicar no ícone
+chatIcon.onclick = function() {
+    chatModal.style.display = 'block';
+};
+
+// Fecha o modal ao clicar no botão de fechar
+closeModal.onclick = function() {
+    chatModal.style.display = 'none';
+};
+
+// Envia a mensagem ao clicar no botão
+sendButton.onclick = function() {
+    const message = chatInput.value;
+    if (message) {
+        const messageElement = document.createElement('div');
+        messageElement.textContent = message;
+        chatMessages.appendChild(messageElement);
+        chatInput.value = ''; // Limpa o campo de entrada
+    }
+};
+
+// Fecha o modal se o usuário clicar fora dele
+window.onclick = function(event) {
+    if (event.target === chatModal) {
+        chatModal.style.display = 'none';
+    }
+}; 
+    const ideas = [
+        {
+            img: "https://randomuser.me/api/portraits/men/13.jpg",
+            text: "Crie um jornal/blog onde os alunos possam escrever sobre eventos da escola, entrevistas e tópicos de interesse.",
+            likes: 130,
+            comments: 53,
+            engaged: 33
+        },
+        {
+            img: "https://randomuser.me/api/portraits/women/24.jpg",
+            text: "Estudantes mais experientes podem oferecer tutoria e suporte para seus colegas, compartilhando conhecimento em diferentes disciplinas.",
+            likes: 410,
+            comments: 35,
+            engaged: 35
+        },
+        {
+            img: "https://randomuser.me/api/portraits/men/33.jpg",
+            text: "Uma comunidade onde os alunos podem discutir livros, fazer resenhas e sugerir leituras, promovendo a literatura entre os estudantes.",
+            likes: 140,
+            comments: 35,
+            engaged: 23
+        },
+        {
+            img: "https://randomuser.me/api/portraits/men/34.jpg",
+            text: "Criação de um clube de ciência onde alunos podem realizar experimentos e compartilhar resultados.",
+            likes: 250,
+            comments: 20,
+            engaged: 50
+        },
+        {
+            img: "https://randomuser.me/api/portraits/women/35.jpg",
+            text: "Desenvolvimento de um aplicativo para conectar alunos que desejam estudar juntos.",
+            likes: 320,
+            comments: 40,
+            engaged: 60
+        }
+    ];
+
+    let currentIdeas = ideas.slice(0, 3); // Inicia com as 3 primeiras ideias
+
+    function renderIdeas() {
+        const container = document.getElementById('ideas-container');
+        container.innerHTML = ''; // Limpa o container antes de renderizar
+        currentIdeas.forEach(idea => {
+            const ideaDiv = document.createElement('div');
+            ideaDiv.className = 'idea';
+            ideaDiv.style.cssText = 'display: flex; align-items: center; padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; background-color: #f9f9f9; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s;';
+
+            ideaDiv.innerHTML = `
+                <a href="ideia.html" style="color: black; text-decoration: none; display: flex; align-items: center;">
+                    <img src="${idea.img}" alt="Amigo" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 15px;">
+                    ${idea.text}
+                    <div class="engagement-icons">
+                        <span><i class="fas fa-heart" style="color:red;"></i> ${idea.likes} Curtidas</span>
+                        <span><i class="fas fa-comment" style="color:blue;"></i> ${idea.comments} Comentários</span>
+                        <span><i class="fas fa-users" style="color:green;"></i> ${idea.engaged} Engajados</span>
+                    </div>
+                </a>
+            `;
+            container.appendChild(ideaDiv);
+        });
+    }
+
+    function updateIdeas() {
+        if (ideas.length > 3) {
+            currentIdeas.unshift(ideas[3]); // Adiciona uma nova ideia no topo
+            ideas.splice(3, 1); // Remove a última ideia da lista
+            renderIdeas();
+        }
+    }
+
+    renderIdeas(); // Renderiza as ideias iniciais
+    setInterval(updateIdeas, 10000); // Atualiza a cada 10 segundos
+</script>
+
+</html>

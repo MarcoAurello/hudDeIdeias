@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentores</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos para o layout geral */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f1f1f1;
+        }
+
+        header {
+            background-color: #007bff; /* Azul */
+            padding: 10px;
+            color: white;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            width: 50px;
+        }
+
+        #container {
+            display: flex;
+            padding: 20px;
+            width: 100%;
+        }
+
+        /* Coluna Esquerda */
+        #left-column {
+            width: 200px;
+            margin-right: 20px;
+        }
+
+        #left-column a {
+            display: block;
+            background-color: orange;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        #left-column a:hover {
+            background-color: darkorange;
+        }
+
+        /* Coluna Principal */
+        #main-column {
+            flex-grow: 1;
+            margin-right: 20px;
+        }
+
+        #ideas-container, #mentors-container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .idea {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .mentor {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .mentor img {
+            border-radius: 50%;
+            margin-right: 10px;
+            width: 50px; /* Ajuste conforme necessário */
+        }
+
+        .mentor button {
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .mentor button:hover {
+            background-color: darkorange;
+        }
+
+        /* Coluna Direita */
+        #right-column {
+            width: 300px;
+        }
+
+        #right-column h2 {
+            margin-top: 0;
+        }
+
+        #testimonials {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+ 
+   
+
+    <div id="container">
+        <!-- Coluna Esquerda -->
+        <aside id="left-column">
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar para a Página Inicial</a>
+            <section id="ai-section">
+                <h3>Use a IA para analisar sua ideia</h3>
+                <p>Obtenha insights automáticos para melhorar sua proposta.</p>
+            </section>
+        </aside>
+        
+
+        <!-- Coluna Principal -->
+        <main id="main-column">
+            <h1>Selecione mentores para suas idéias</h1>
+            <section id="ideas-container">
+                <h2>Minhas Ideias</h2>
+                <div class="idea">
+                    <span>Criar uma feira de ciências colaborativa</span>
+                    <input type="checkbox" class="select-mentor-checkbox"> 
+                </div>
+                <div class="idea">
+                    <span>Desenvolver um aplicativo de aprendizado</span>
+                    <input type="checkbox" class="select-mentor-checkbox"> 
+                </div>
+                <div class="idea">
+                    <span>Organizar um hackathon</span>
+                    <input type="checkbox" class="select-mentor-checkbox"> 
+                </div>
+                <!-- Adicione mais ideias conforme necessário -->
+            </section>
+
+            <section id="mentors-container" class="hidden">
+                <h2>Mentores Disponíveis</h2>
+                <div class="mentor">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mentor 1">
+                    <div>
+                        <h3>Mentor 1</h3>
+                        <p>Profissão: Engenheiro de Software</p>
+                        <p>Breve currículo: 10 anos de experiência em desenvolvimento de sistemas.</p>
+                        <button>Convidar Mentor</button>
+                    </div>
+                </div>
+                <div class="mentor">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Mentor 2">
+                    <div>
+                        <h3>Mentor 2</h3>
+                        <p>Profissão: Designer Gráfico</p>
+                        <p>Breve currículo: Especialista em design de interfaces e experiência do usuário.</p>
+                        <button>Convidar Mentor</button>
+                    </div>
+                </div>
+                <div class="mentor">
+                    <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Mentor 3">
+                    <div>
+                        <h3>Mentor 3</h3>
+                        <p>Profissão: Educador</p>
+                        <p>Breve currículo: Focado em metodologias ativas e aprendizado colaborativo.</p>
+                        <button>Convidar Mentor</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Coluna Direita -->
+        <aside id="right-column">
+            <section id="testimonials">
+                <h2>Ideias que Você Segue</h2>
+                <!-- Adicione conteúdo adicional aqui se necessário -->
+            </section>
+        </aside>
+    </div>
+
+    <script>
+        // Função para selecionar uma ideia
+        const selectIdeaBtns = document.querySelectorAll('.select-idea-btn');
+        selectIdeaBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('Você selecionou esta ideia!');
+            });
+        });
+
+        // Função para convidar mentores
+        const inviteMentorBtns = document.querySelectorAll('.mentor button');
+        inviteMentorBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('Mentor convidado com sucesso!');
+            });
+        });
+        const ideasCheckboxes = document.querySelectorAll('.select-mentor-checkbox');
+const mentorsContainer = document.getElementById('mentors-container');
+
+ideasCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        if (Array.from(ideasCheckboxes).some(checkbox => checkbox.checked)) {
+            mentorsContainer.classList.remove('hidden'); // Exibe a lista de mentores
+        } else {
+            mentorsContainer.classList.add('hidden'); // Esconde a lista de mentores se nenhuma ideia estiver selecionada
+        }
+    });
+});
+    </script>
+</body>
+</html>

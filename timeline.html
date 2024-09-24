@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline - Rede Social</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f1f1f1;
+        }
+        header {
+            background-color: #007bff;
+            padding: 10px;
+            color: white;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #container {
+            display: flex;
+            padding: 20px;
+            width: 100%;
+        }
+        #left-column {
+            width: 200px;
+            margin-right: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        #left-column a {
+            display: block;
+            background-color: orange;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        #left-column a:hover {
+            background-color: darkorange;
+        }
+        #main-column {
+            flex-grow: 1;
+            margin-right: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .scrollable-posts {
+            max-height: 600px; /* Altura máxima para permitir pelo menos 3 postagens */
+            overflow-y: auto;  /* Ativa o scroll vertical */
+            scrollbar-width: none; /* Oculta a barra de rolagem no Firefox */
+        }
+        .scrollable-posts::-webkit-scrollbar {
+            display: none; /* Oculta a barra de rolagem no Chrome/Safari */
+        }
+        .post {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        .post-header {
+            display: flex;
+            align-items: center;
+        }
+        .post-user-pic {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .like-btn, .share-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: blue; /* Cor azul para os botões */
+        }
+        .like-btn:hover, .share-btn:hover {
+            color: darkblue; /* Cor mais escura ao passar o mouse */
+        }
+        #right-column {
+            width: 300px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        #right-column h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <!-- Coluna Esquerda -->
+        <aside id="left-column">
+            <div id="profile">
+                <img src="https://picsum.photos/50?random=99" alt="Foto de Perfil" id="profile-pic">
+                <p class="username">Seu Nome</p>
+            </div>
+            <a href="index.html"><i class="fas fa-plus"></i> Voltar para página principal</a>
+        </aside>
+
+        <!-- Coluna Principal -->
+        <main id="main-column">
+            <h2>Últimas Ideias Postadas</h2> <!-- Título adicionado -->
+            <section id="posts" class="scrollable-posts">
+                <!-- Postagem 1 -->
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://picsum.photos/50?random=1" alt="Usuario 1" class="post-user-pic">
+                        <p class="post-username">Usuario 1</p>
+                    </div>
+                    <img src="https://picsum.photos/500/300?random=1" alt="Postagem 1" class="post-image">
+                    <div class="post-actions">
+                        <button class="like-btn"><i class="fas fa-heart"></i> <span class="likes-count">10 Likes</span></button>
+                        <button class="share-btn"><i class="fas fa-share"></i> Compartilhar</button>
+                    </div>
+                    <div class="post-comments">
+                        <div class="comment">
+                            <p><strong>Usuario 2:</strong> Adorei essa imagem!</p>
+                        </div>
+                        <div class="comment-input">
+                            <input type="text" placeholder="Adicione um comentário..." id="comment-input-1">
+                            <button class="submit-comment-btn" data-post-id="1">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Postagem 2 -->
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://picsum.photos/50?random=2" alt="Usuario 2" class="post-user-pic">
+                        <p class="post-username">Usuario 2</p>
+                    </div>
+                    <img src="https://picsum.photos/500/300?random=2" alt="Postagem 2" class="post-image">
+                    <div class="post-actions">
+                        <button class="like-btn"><i class="fas fa-heart"></i> <span class="likes-count">5 Likes</span></button>
+                        <button class="share-btn"><i class="fas fa-share"></i> Compartilhar</button>
+                    </div>
+                    <div class="post-comments">
+                        <div class="comment">
+                            <p><strong>Usuario 1:</strong> Muito bom!</p>
+                        </div>
+                        <div class="comment-input">
+                            <input type="text" placeholder="Adicione um comentário..." id="comment-input-2">
+                            <button class="submit-comment-btn" data-post-id="2">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Postagem 3 -->
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://picsum.photos/50?random=3" alt="Usuario 3" class="post-user-pic">
+                        <p class="post-username">Usuario 3</p>
+                    </div>
+                    <img src="https://picsum.photos/500/300?random=3" alt="Postagem 3" class="post-image">
+                    <div class="post-actions">
+                        <button class="like-btn"><i class="fas fa-heart"></i> <span class="likes-count">8 Likes</span></button>
+                        <button class="share-btn"><i class="fas fa-share"></i> Compartilhar</button>
+                    </div>
+                    <div class="post-comments">
+                        <div class="comment">
+                            <p><strong>Usuario 2:</strong> Incrível!</p>
+                        </div>
+                        <div class="comment-input">
+                            <input type="text" placeholder="Adicione um comentário..." id="comment-input-3">
+                            <button class="submit-comment-btn" data-post-id="3">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Postagem 4 -->
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://picsum.photos/50?random=4" alt="Usuario 4" class="post-user-pic">
+                        <p class="post-username">Usuario 4</p>
+                    </div>
+                    <img src="https://picsum.photos/500/300?random=4" alt="Postagem 4" class="post-image">
+                    <div class="post-actions">
+                        <button class="like-btn"><i class="fas fa-heart"></i> <span class="likes-count">12 Likes</span></button>
+                        <button class="share-btn"><i class="fas fa-share"></i> Compartilhar</button>
+                    </div>
+                    <div class="post-comments">
+                        <div class="comment">
+                            <p><strong>Usuario 3:</strong> Muito legal!</p>
+                        </div>
+                        <div class="comment-input">
+                            <input type="text" placeholder="Adicione um comentário..." id="comment-input-4">
+                            <button class="submit-comment-btn" data-post-id="4">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Postagem 5 -->
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://picsum.photos/50?random=5" alt="Usuario 5" class="post-user-pic">
+                        <p class="post-username">Usuario 5</p>
+                    </div>
+                    <img src="https://picsum.photos/500/300?random=5" alt="Postagem 5" class="post-image">
+                    <div class="post-actions">
+                        <button class="like-btn"><i class="fas fa-heart"></i> <span class="likes-count">15 Likes</span></button>
+                        <button class="share-btn"><i class="fas fa-share"></i> Compartilhar</button>
+                    </div>
+                    <div class="post-comments">
+                        <div class="comment">
+                            <p><strong>Usuario 4:</strong> Fantástico!</p>
+                        </div>
+                        <div class="comment-input">
+                            <input type="text" placeholder="Adicione um comentário..." id="comment-input-5">
+                            <button class="submit-comment-btn" data-post-id="5">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Coluna Direita -->
+        <aside id="right-column">
+            <h2>Sugestões</h2>
+            <ul>
+                <li>Usuario 6</li>
+                <li>Usuario 7</li>
+                <li>Usuario 8</li>
+            </ul>
+        </aside>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,350 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do header */
+header {
+    background-color: #3B5998;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Container geral */
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+#left-column, #right-column {
+    flex: 1 1 200px;
+    background-color: #EDEDED;
+    padding: 10px;
+}
+
+#main-column {
+    flex: 3 1 600px;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Estilos para a tabela */
+table {
+    border-collapse: collapse;
+}
+
+td {
+    vertical-align: middle;
+    padding: 10px;
+}
+
+#profile-pic {
+    width: 130px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#communities {
+    text-align: left;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilo padrão para todas as ideias */
+.idea {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Botão "Ver todos" */
+.see-all-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.see-all-btn:hover {
+    background-color: darkorange;
+}
+
+body {
+    background-color: #F0F0F0;
+    color: #333;
+}
+
+#profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+}
+
+.username {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #3B5998;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+ul li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.05);
+    margin-right: 10px;
+}
+
+button {
+    background-color: #3B5998;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2D4373;
+}
+
+#new-idea {
+    margin-bottom: 20px;
+}
+
+#new-idea-input {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#recent-visitors {
+    margin-top: 20px;
+}
+
+/* Seção de ideias */
+.idea {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.engagement-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.engagement-icons span {
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+#online-indicator {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: orange;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#online-indicator:hover {
+    background-color: #0056b3;
+}
+
+#online-indicator i {
+    margin-right: 5px;
+}
+
+/* Estilos para os textos de ideias como links */
+#recent-visitors ul li,
+#updates .idea,
+#communities ul li {
+    color: black;
+    text-decoration: none;
+}
+
+#recent-visitors ul li:hover,
+#updates .idea:hover,
+#communities ul li:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+#recent-visitors ul li a,
+#updates .idea a,
+#communities ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+#recent-visitors ul li a:hover,
+#updates .idea a:hover,
+#communities ul li a:hover {
+    color: orange;
+}
+
+/* Adição da seção IA */
+#ai-analysis {
+    margin-top: 20px;
+    background-color: #EDEDED;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#ai-analysis h3 {
+    font-size: 20px;
+    color: #3B5998;
+}
+
+#ai-analysis p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilos das postagens */
+.post {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.post-user-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.like-btn, .share-btn {
+    background-color: #3B5998;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.like-btn:hover, .share-btn:hover {
+    background-color: #2D4373;
+}
+
+/* Estilos para a lista de amigos */
+#right-column ul {
+    list-style-type: none;
+}
+
+#right-column ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#right-column ul li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.animated-ideas {
+    display: none; /* Ocultar todas as seções inicialmente */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.animated-ideas.active {
+    display: block; /* Mostrar apenas a seção ativa */
+    opacity: 1;
+}
+
+.ideas-list a {
+    color: black; /* Muda a cor do texto para preto */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suave transição de fundo e cor */
+    display: block; /* Faz o link ocupar toda a área do componente */
+    padding: 10px; /* Adiciona espaço interno ao link */
+}
+
+.ideas-list a:hover {
+    background-color: rgba(255, 165, 0, 0.1); /* Fundo laranja claro ao passar o mouse */
+    color: orange; /* Muda a cor do texto para laranja ao passar o mouse */
+}
+
+.idea {
+    margin-bottom: 10px; /* Adiciona espaço entre as ideias */
+    padding: 10px; /* Adiciona preenchimento ao componente */
+    border: 1px solid #ccc; /* Adiciona uma borda ao redor da ideia */
+    border-radius: 5px; /* Bordas arredondadas */
+    background: #f9f9f9; /* Fundo leve */
+}

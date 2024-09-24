@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub de Ideias - Nova Ideia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilo para o formulário */
+        #new-idea-form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        #new-idea-form h2 {
+            color: orange;
+        }
+        #new-idea-form select, #new-idea-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #new-idea-form button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #new-idea-form button:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <table>
+            <tr>
+                <td>
+                    <img src="senac.png" alt="Foto de Perfil" id="profile-pic">
+                </td>
+                <td>
+                    <h1>Hub de Ideias</h1>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <div id="container">
+        <!-- Coluna Esquerda -->
+        <aside id="left-column">
+            <div id="profile">
+                <a href="index.html" class="see-all-btn"><i ></i> Voltar para a Página Inicial</a>
+           
+            </div>
+            <div id="communities">
+                <h2><i class="fas fa-trophy"></i> Área de mentorias</h2>
+                <a href="mentores.html">
+                    <button class="see-all-btn">Preciso de um mentor</button>
+                </a>
+                <a href="cadastro-mentor.html">
+                    <button class="see-all-btn">Quero ser mentor</button>
+                </a>
+                <a href="dicas-inovacao.html">
+                    <button class="see-all-btn">Como ter ideias inovadoras?</button>
+                </a>
+            </div>
+            <br>
+        </aside>
+
+        <!-- Coluna Central -->
+        <main id="main-column">
+            <!-- Formulário de Nova Ideia -->
+            <section id="new-idea-form">
+                <h2>Cadastrar Nova Ideia</h2>
+                <form>
+                    <b>Titulo da ideia</b>
+                    <textarea id="contexto" name="contexto" placeholder="Titulo" rows="1"></textarea>
+                    <b>
+
+                        <label for="tipo-ideia">Tipo de Ideia</label>
+                    </b>
+                    <select id="tipo-ideia" name="tipo-ideia">
+                        <option value="oportunidade">Oportunidade</option>
+                        <option value="ameaca">Ameaça</option>
+                    </select>
+                    
+                    <b>
+
+                        <label for="contexto">Contexto</label>
+                    </b>
+                    <p>Insira informações relevantes que ajudem a IA a te ajudar Exemplo:
+                        sou do 2 ano dessa escola e mimha ideia surgiu quando...
+                    </p>
+                    <textarea id="contexto" name="contexto" placeholder="Descreva o contexto" rows="4"></textarea>
+                   
+                    
+                    <b>
+
+                        <label for="ideia">Sua Ideia</label>
+                    </b>
+                    <p>Explique detalhadamente sua idáeia</p>
+                    <textarea id="ideia" name="ideia" placeholder="Descreva sua ideia" rows="4"></textarea>
+                   
+                    
+                    <button type="submit">Cadastrar Ideia</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
