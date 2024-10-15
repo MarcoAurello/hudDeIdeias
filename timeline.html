@@ -117,7 +117,7 @@
 
         <!-- Coluna Principal -->
         <main id="main-column">
-            <h2>Últimas Ideias Postadas</h2> <!-- Título adicionado -->
+            <h2>Últimas Ideias Postadas</h2>
             <section id="posts" class="scrollable-posts">
                 <!-- Postagem 1 -->
                 <div class="post">
@@ -133,6 +133,12 @@
                     <div class="post-comments">
                         <div class="comment">
                             <p><strong>Usuario 2:</strong> Adorei essa imagem!</p>
+                        </div>
+                        <div class="comment">
+                            <p><strong>Usuario 3:</strong> Muito inspiradora!</p>
+                        </div>
+                        <div class="comment">
+                            <p><strong>Usuario 4:</strong> Onde você tirou essa foto?</p>
                         </div>
                         <div class="comment-input">
                             <input type="text" placeholder="Adicione um comentário..." id="comment-input-1">
@@ -156,6 +162,12 @@
                         <div class="comment">
                             <p><strong>Usuario 1:</strong> Muito bom!</p>
                         </div>
+                        <div class="comment">
+                            <p><strong>Usuario 3:</strong> Legal! Me deu uma ideia!</p>
+                        </div>
+                        <div class="comment">
+                            <p><strong>Usuario 5:</strong> Você deveria fazer mais assim!</p>
+                        </div>
                         <div class="comment-input">
                             <input type="text" placeholder="Adicione um comentário..." id="comment-input-2">
                             <button class="submit-comment-btn" data-post-id="2">Enviar</button>
@@ -178,6 +190,12 @@
                         <div class="comment">
                             <p><strong>Usuario 2:</strong> Incrível!</p>
                         </div>
+                        <div class="comment">
+                            <p><strong>Usuario 4:</strong> Eu quero algo parecido!</p>
+                        </div>
+                        <div class="comment">
+                            <p><strong>Usuario 6:</strong> Você é muito criativo!</p>
+                        </div>
                         <div class="comment-input">
                             <input type="text" placeholder="Adicione um comentário..." id="comment-input-3">
                             <button class="submit-comment-btn" data-post-id="3">Enviar</button>
@@ -198,7 +216,13 @@
                     </div>
                     <div class="post-comments">
                         <div class="comment">
-                            <p><strong>Usuario 3:</strong> Muito legal!</p>
+                            <p><strong>Usuario 3:</strong> Isso é demais!</p>
+                        </div>
+                        <div class="comment">
+                            <p><strong>Usuario 5:</strong> Queria saber fazer algo assim!</p>
+                        </div>
+                        <div class="comment">
+                            <p><strong>Usuario 7:</strong> Perfeito!</p>
                         </div>
                         <div class="comment-input">
                             <input type="text" placeholder="Adicione um comentário..." id="comment-input-4">
@@ -206,41 +230,60 @@
                         </div>
                     </div>
                 </div>
-        
-                <!-- Postagem 5 -->
-                <div class="post">
-                    <div class="post-header">
-                        <img src="https://picsum.photos/50?random=5" alt="Usuario 5" class="post-user-pic">
-                        <p class="post-username">Usuario 5</p>
-                    </div>
-                    <img src="https://picsum.photos/500/300?random=5" alt="Postagem 5" class="post-image">
-                    <div class="post-actions">
-                        <button class="like-btn"><i class="fas fa-heart"></i> <span class="likes-count">15 Likes</span></button>
-                        <button class="share-btn"><i class="fas fa-share"></i> Compartilhar</button>
-                    </div>
-                    <div class="post-comments">
-                        <div class="comment">
-                            <p><strong>Usuario 4:</strong> Fantástico!</p>
-                        </div>
-                        <div class="comment-input">
-                            <input type="text" placeholder="Adicione um comentário..." id="comment-input-5">
-                            <button class="submit-comment-btn" data-post-id="5">Enviar</button>
-                        </div>
-                    </div>
-                </div>
+
             </section>
         </main>
 
         <!-- Coluna Direita -->
         <aside id="right-column">
-            <h2>Sugestões</h2>
+            <h2>Usuários em Destaque</h2>
             <ul>
-                <li>Usuario 6</li>
-                <li>Usuario 7</li>
-                <li>Usuario 8</li>
+                <li>
+                    <img src="https://picsum.photos/50?random=5" alt="Usuario 5" class="post-user-pic">
+                    <p>Usuario 5</p>
+                </li>
+                <li>
+                    <img src="https://picsum.photos/50?random=6" alt="Usuario 6" class="post-user-pic">
+                    <p>Usuario 6</p>
+                </li>
+                <li>
+                    <img src="https://picsum.photos/50?random=7" alt="Usuario 7" class="post-user-pic">
+                    <p>Usuario 7</p>
+                </li>
+                <li>
+                    <img src="https://picsum.photos/50?random=8" alt="Usuario 8" class="post-user-pic">
+                    <p>Usuario 8</p>
+                </li>
             </ul>
         </aside>
     </div>
+
+    <script>
+        // Captura os botões de envio de comentário
+        const submitCommentButtons = document.querySelectorAll('.submit-comment-btn');
+
+        submitCommentButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const postId = event.target.getAttribute('data-post-id');
+                const commentInput = document.querySelector(`#comment-input-${postId}`);
+                const commentText = commentInput.value;
+
+                if (commentText) {
+                    // Cria um novo comentário
+                    const newComment = document.createElement('div');
+                    newComment.className = 'comment';
+                    newComment.innerHTML = `<p><strong>Você:</strong> ${commentText}</p>`;
+                    
+                    // Adiciona o novo comentário ao post
+                    const commentsSection = document.querySelector(`.post-comments`);
+                    commentsSection.appendChild(newComment);
+                    
+                    // Limpa o campo de entrada
+                    commentInput.value = '';
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

@@ -101,7 +101,7 @@
                     </a>
                 </td> -->
                 <td>
-                    <h1>conecte-se</h1>
+                    <h5></h5>
                     <a href="https://marconunessenac.wixsite.com/marcoaurellio" target="_blank">
                         <button class="see-all-btn">Entrevista com usuário</button>
                     </a>
@@ -114,22 +114,43 @@
         <!-- Coluna Esquerda -->
         <aside id="left-column">
             <div id="profile">
-                <img src="https://cdn.awsli.com.br/2500x2500/1610/1610163/produto/177684970/poster-o-espetacular-homem-aranha-2-f-3835af38.jpg"
+                <img src="https://static1.purebreak.com.br/articles/9/11/65/39/@/542041-dia-do-estudante-5-situacoes-que-todo-a-diapo-2.jpg"
                     alt="Foto de Perfil" id="profile-pic">
-                <p class="username">Marco Aurellio</p>
+                <p class="username">Ola, Aluno</p>
             </div>
-            <div id="communities">
-                <h2><i class="fas fa-trophy"></i> Área de mentorias</h2>
-                <a href='mentores.html'>
-                    <button class="see-all-btn">Preciso de um mentor</button>
+            <div id="communities" style="background-color: #f4f4f4; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 600px; margin: auto; text-align: center;">
+                <h2 style="color: #333; font-family: 'Arial', sans-serif; margin-bottom: 15px;">
+                    <i class="fas fa-trophy" style="color: #FFA500;"></i> Área de Mentorias
+                </h2>
+            
+                <button id="submit-idea-btn" onclick="window.location.href='novaIdeia.html'" style="font-size: 22px; background-color: #3b5998; color: white; border: none; padding: 10px; border-radius: 5px; display: flex; align-items: center; cursor: pointer; text-decoration: none; width: 100%; max-width: 300px; margin: 5px auto;">
+                    <i class="fas fa-lightbulb" style="margin-right: 10px;"></i> 
+                    Enviar Nova Ideia
+                </button>
+            
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+            
+                <a href='mentores.html' style="text-decoration: none;">
+                    <button class="see-all-btn" style="background-color: #FFC107; color: white; border: none; border-radius: 5px; padding: 10px; font-size: 16px; cursor: pointer; width: 100%; max-width: 300px; margin: 5px auto; display: flex; align-items: center; transition: background-color 0.3s;">
+                        <i class="fas fa-user-graduate" style="margin-right: 8px;"></i> Preciso de um mentor
+                    </button>
                 </a>
-                <a href="cadastro-mentor.html">
-                    <button class="see-all-btn">Quero ser mentor</button>
+            
+                <a href="cadastro-mentor.html" style="text-decoration: none;">
+                    <button class="see-all-btn" style="background-color: #FFC107; color: white; border: none; border-radius: 5px; padding: 10px; font-size: 16px; cursor: pointer; width: 100%; max-width: 300px; margin: 5px auto; display: flex; align-items: center; transition: background-color 0.3s;">
+                        <i class="fas fa-user-plus" style="margin-right: 8px;"></i> Quero ser mentor
+                    </button>
                 </a>
-                <a href="dicas-inovacao.html">
-                    <button class="see-all-btn">Como ter ideias inovadoras?</button>
+            
+                <a href="dicas-inovacao.html" style="text-decoration: none;">
+                    <button class="see-all-btn" style="background-color: #FFC107; color: white; border: none; border-radius: 5px; padding: 10px; font-size: 16px; cursor: pointer; width: 100%; max-width: 300px; margin: 5px auto; display: flex; align-items: center; transition: background-color 0.3s;">
+                        <i class="fas fa-lightbulb" style="margin-right: 8px;"></i> Como ter ideias inovadoras?
+                    </button>
                 </a>
             </div>
+            
+            
+            
             <br>
             <div id="friends"
                 style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 600px; margin: auto;">
@@ -189,32 +210,63 @@
 
                 <!--                 
                 <textarea id="new-idea-input" placeholder="Digite aqui sua nova ideia"></textarea> -->
-                <a href="novaIdeia.html"> <button id="submit-idea-btn" style="font-size: 22px;">
-                        <img src="data:image/png;base64,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"
-                            alt="Amigo 1" style="border-radius: 50%; width: 35px; height: 35px; margin-right: 15px;">
-                        Conte aqui sua idéia
-                        <img src="data:image/png;base64,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"
-                            alt="Amigo 1" style="border-radius: 50%; width: 35px; height: 35px; margin-right: 15px;">
-
-
-
-                    </button></a>
-
+             
                 <p></p>
             </section>
             <p></p>
 
             <!-- Ideias novas -->
             <p></p>
-            <section id="new-ideas" class="ideas-section">
-                <h2 style="color: orange; margin-top: 10px;">
-                    <i class="fas fa-chart-line"></i> Ideias cadastradas Recentemente
-                </h2>
-                <div id="ideas-container"></div>
+            <section id="popular-ideas" class="ideas-section" style="margin-top: 20px;">
+                <h2 style="color: orange; text-align: center;"><i class="fas fa-chart-line"></i> Ideias com Maior Engajamento</h2>
+            
+                <div class="idea" style="display: flex; flex-direction: column; align-items: flex-start; padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; background-color: #f9f9f9; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s;">
+                    <a href="ideia.html" style="color: black; text-decoration: none; width: 100%;">
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Amigo 1" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 15px;">
+                            <span style="flex: 1;">Organize uma feira de ciências onde os alunos possam apresentar projetos inovadores, promovendo criatividade e aprendizado colaborativo.</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding-top: 10px; border-top: 1px solid #ddd; width: 100%;">
+                            <span><i class="fas fa-heart" style="color:red;"></i> 200 Curtidas</span>
+                            <span><i class="fas fa-comment" style="color:blue;"></i> 40 Comentários</span>
+                            <span><i class="fas fa-users" style="color:green;"></i> 50 Engajados</span>
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="idea" style="display: flex; flex-direction: column; align-items: flex-start; padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; background-color: #f9f9f9; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s;">
+                    <a href="ideia.html" style="color: black; text-decoration: none; width: 100%;">
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Amigo 2" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 15px;">
+                            <span style="flex: 1;">Crie uma plataforma de troca de livros, onde os alunos possam compartilhar e trocar materiais de leitura, incentivando a leitura entre todos.</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding-top: 10px; border-top: 1px solid #ddd; width: 100%;">
+                            <span><i class="fas fa-heart" style="color:red;"></i> 350 Curtidas</span>
+                            <span><i class="fas fa-comment" style="color:blue;"></i> 60 Comentários</span>
+                            <span><i class="fas fa-users" style="color:green;"></i> 80 Engajados</span>
+                        </div>
+                    </a>
+                </div>
+            
+                <div class="idea" style="display: flex; flex-direction: column; align-items: flex-start; padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; background-color: #f9f9f9; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s;">
+                    <a href="ideia.html" style="color: black; text-decoration: none; width: 100%;">
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <img src="https://randomuser.me/api/portraits/men/57.jpg" alt="Amigo 3" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 15px;">
+                            <span style="flex: 1;">Desenvolva um clube de debates, onde os alunos possam discutir temas atuais e desenvolver habilidades de argumentação e pensamento crítico.</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding-top: 10px; border-top: 1px solid #ddd; width: 100%;">
+                            <span><i class="fas fa-heart" style="color:red;"></i> 480 Curtidas</span>
+                            <span><i class="fas fa-comment" style="color:blue;"></i> 70 Comentários</span>
+                            <span><i class="fas fa-users" style="color:green;"></i> 95 Engajados</span>
+                        </div>
+                    </a>
+                </div>
+            
                 <a href="timeline.html">
                     <button class="submit-idea-btn" style="margin-bottom: 10px;">Ver Todas</button>
                 </a>
             </section>
+            
             <hr>
 
 
@@ -223,59 +275,55 @@
 
             <!-- Ideias com Maior Engajamento -->
             <section id="popular-ideas" class="ideas-section" style="margin-top: 20px;">
-                <h2 style="color: orange;"><i class="fas fa-chart-line"></i> Ideias com Maior Engajamento</h2>
-                <div class="idea"
-                    style="display: flex; align-items: center; padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; background-color: #f9f9f9; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s;">
-                    <a href="ideia.html"
-                        style="color: black; text-decoration: none; display: flex; align-items: center;">
-                        <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Amigo 1"
-                            style="border-radius: 50%; width: 50px; height: 50px; margin-right: 15px;">
-                        Crie um jornal/blog onde os alunos possam escrever sobre eventos da escola, entrevistas e
-                        tópicos de interesse.
-                        <div class="engagement-icons">
+                <h2 style="color: orange; text-align: center;"><i class="fas fa-chart-line"></i> Ideias com Maior Engajamento</h2>
+            
+                <div class="idea" style="display: flex; flex-direction: column; align-items: flex-start; padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; background-color: #f9f9f9; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s;">
+                    <a href="ideia.html" style="color: black; text-decoration: none; width: 100%;">
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Amigo 1" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 15px;">
+                            <span style="flex: 1;">Crie um jornal/blog onde os alunos possam escrever sobre eventos da escola, entrevistas e tópicos de interesse.</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding-top: 10px; border-top: 1px solid #ddd; width: 100%;">
                             <span><i class="fas fa-heart" style="color:red;"></i> 150 Curtidas</span>
                             <span><i class="fas fa-comment" style="color:blue;"></i> 35 Comentários</span>
                             <span><i class="fas fa-users" style="color:green;"></i> 32 Engajados</span>
                         </div>
                     </a>
                 </div>
-
-                <div class="idea"
-                    style="display: flex; align-items: center; padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; background-color: #f9f9f9; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s;">
-                    <a href="ideia.html"
-                        style="color: black; text-decoration: none; display: flex; align-items: center;">
-                        <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Amigo 2"
-                            style="border-radius: 50%; width: 50px; height: 50px; margin-right: 15px;">
-                        Estudantes mais experientes podem oferecer tutoria e suporte para seus colegas, compartilhando
-                        conhecimento em diferentes disciplinas.
-                        <div class="engagement-icons">
+            
+                <div class="idea" style="display: flex; flex-direction: column; align-items: flex-start; padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; background-color: #f9f9f9; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s;">
+                    <a href="ideia.html" style="color: black; text-decoration: none; width: 100%;">
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Amigo 2" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 15px;">
+                            <span style="flex: 1;">Estudantes mais experientes podem oferecer tutoria e suporte para seus colegas, compartilhando conhecimento em diferentes disciplinas.</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding-top: 10px; border-top: 1px solid #ddd; width: 100%;">
                             <span><i class="fas fa-heart" style="color:red;"></i> 510 Curtidas</span>
                             <span><i class="fas fa-comment" style="color:blue;"></i> 25 Comentários</span>
                             <span><i class="fas fa-users" style="color:green;"></i> 43 Engajados</span>
                         </div>
                     </a>
                 </div>
-
-                <div class="idea"
-                    style="display: flex; align-items: center; padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; background-color: #f9f9f9; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s;">
-                    <a href="ideia.html"
-                        style="color: black; text-decoration: none; display: flex; align-items: center;">
-                        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Amigo 3"
-                            style="border-radius: 50%; width: 50px; height: 50px; margin-right: 15px;">
-                        Uma comunidade onde os alunos podem discutir livros, fazer resenhas e sugerir leituras,
-                        promovendo a literatura entre os estudantes.
-                        <div class="engagement-icons">
+            
+                <div class="idea" style="display: flex; flex-direction: column; align-items: flex-start; padding: 10px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; background-color: #f9f9f9; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s;">
+                    <a href="ideia.html" style="color: black; text-decoration: none; width: 100%;">
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Amigo 3" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 15px;">
+                            <span style="flex: 1;">Uma comunidade onde os alunos podem discutir livros, fazer resenhas e sugerir leituras, promovendo a literatura entre os estudantes.</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding-top: 10px; border-top: 1px solid #ddd; width: 100%;">
                             <span><i class="fas fa-heart" style="color:red;"></i> 410 Curtidas</span>
                             <span><i class="fas fa-comment" style="color:blue;"></i> 35 Comentários</span>
                             <span><i class="fas fa-users" style="color:green;"></i> 23 Engajados</span>
                         </div>
                     </a>
                 </div>
+            
                 <a href="timeline.html">
                     <button class="submit-idea-btn" style="margin-bottom: 10px;">Ver Todas</button>
-                    <p></p>
                 </a>
             </section>
+            
         </main>
 
         <!-- Coluna Direita -->
@@ -331,17 +379,26 @@
                     <span id="online-count">5</span> 💬
                 </div>
                 <div id="chat-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close-button" id="close-modal">&times;</span>
-                        <h2>Bate-papo</h2>
-                        <div id="chat-messages" class="chat-messages">
+                    <div style="width: 300px; background-color: #f9f9f9; border-radius: 10px; padding: 20px; font-family: Arial, sans-serif; position: fixed; bottom: 20px; right: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                        <span id="close-modal" style="font-size: 24px; position: absolute; top: 10px; right: 10px; cursor: pointer;">&times;</span>
+                        <h2 style="text-align: center; font-size: 18px; color: #333;">Bate-papo</h2>
+                    
+                        <div id="chat-messages" style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; height: 200px; overflow-y: auto; background-color: #fff; margin-bottom: 15px;">
                             <!-- Mensagens do bate-papo -->
+                            <div style="background-color: #d9edf7; border-radius: 5px; padding: 8px; margin-bottom: 10px; width: fit-content; max-width: 70%;">
+                                <p style="margin: 0; font-size: 14px; color: #31708f;">Oi, o que você acha da minha ideia?</p>
+                            </div>
+                            <div style="background-color: #f7f7f7; border-radius: 5px; padding: 8px; margin-bottom: 10px; width: fit-content; max-width: 70%; margin-left: auto;">
+                                <p style="margin: 0; font-size: 14px; color: #555;">Achei interessante! Vamos trabalhar juntos nisso.</p>
+                            </div>
                         </div>
-                        <div class="input-container">
-                            <input type="text" id="chat-input" placeholder="Digite sua mensagem..." />
-                            <button id="send-button">Enviar</button>
+                    
+                        <div class="input-container" style="display: flex; align-items: center;">
+                            <input type="text" id="chat-input" placeholder="Digite sua mensagem..." style="flex-grow: 1; padding: 8px; border: 1px solid #ccc; border-radius: 5px; margin-right: 10px; font-size: 14px;" />
+                            <button id="send-button" style="background-color: #4CAF50; color: white; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer;">Enviar</button>
                         </div>
                     </div>
+                    
     </div>
 
     <footer>
